@@ -14,12 +14,12 @@ external create_subscriber
 
 external next
     : 'a -> unit
-    = ""
+    = "next"
     [@@bs.send.pipe: 'a subscriber]
 
 external complete
     : unit
-    = ""
+    = "complete"
     [@@bs.send.pipe: 'a subscriber]
 
 external create_observable
@@ -29,7 +29,7 @@ external create_observable
 
 external subscribe
     : ('a -> unit) -> unit
-    = ""
+    = "subscribe"
     [@@bs.send.pipe: 'a observable]
 
 external animation_frame
@@ -39,7 +39,7 @@ external animation_frame
 
 external interval
     : int -> scheduler -> int observable
-    = ""
+    = "interval"
     [@@bs.val] [@@bs.module "rxjs"]
 
 external create_of
@@ -78,22 +78,22 @@ external merge_map
 
 external scan
     : ('b -> 'a -> int -> 'b) -> 'b -> ('a, 'b) operator_function
-    = ""
+    = "scan"
     [@@bs.module "rxjs/operators"]
 
 external filter
     : ('a -> bool) -> 'a mono_type_operator_function
-    = ""
+    = "filter"
     [@@bs.module "rxjs/operators"]
 
 external sample
     : 'a observable -> 'b mono_type_operator_function
-    = ""
+    = "sample"
     [@@bs.module "rxjs/operators"]
 
 external share
     : unit -> 'a mono_type_operator_function
-    = ""
+    = "share"
     [@@bs.module "rxjs/operators"]
 
 external share_replay
@@ -103,7 +103,7 @@ external share_replay
 
 external tap
     : ('a -> 'b) -> 'a mono_type_operator_function
-    = ""
+    = "tap"
     [@@bs.module "rxjs/operators"]
 
 external with_latest_from
