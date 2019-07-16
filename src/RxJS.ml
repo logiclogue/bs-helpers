@@ -61,11 +61,6 @@ let merge
     : ('a observable) array -> 'a observable
     = fun _streams -> [%bs.raw {| Rxjs.merge.apply({}, _streams) |}]
 
-external from_event
-    : 'a Event.t -> string -> 'a observable
-    = "fromEvent"
-    [@@bs.val] [@@bs.module "rxjs"]
-
 external map
     : ('a -> 'b) -> ('a, 'b) operator_function
     = "map"
