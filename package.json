@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/logiclogue/bs-helpers/issues"
   },
-  "homepage": "https://github.com/logiclogue/bs-helpers#readme"
+  "homepage": "https://github.com/logiclogue/bs-helpers#readme",
+  "devDependencies": {
+    "bs-platform": "^5.0.6"
+  }
 }
