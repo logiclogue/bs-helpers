@@ -13,3 +13,5 @@ val insert_if_not_exist : 'a -> 'a list -> 'a list
 val to_unique_list      : 'a list -> 'a list
 val remove              : 'a -> 'a list -> 'a list
 val zip                 : 'a list -> 'b list -> ('a * 'b) list option
+val take                : int -> 'a list -> 'a list
+val drop                : int -> 'a list -> 'a list

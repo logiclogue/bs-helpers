@@ -74,3 +74,19 @@ let zip xs ys =
         Some (List.map2 (fun x y -> (x, y)) xs ys)
     with
         _ -> None
+
+let rec take n xs =
+    if n <= 0 then
+        []
+    else
+        match xs with
+        | x :: xs -> x :: (take (n - 1) xs)
+        | []      -> []
+
+let rec drop n xs =
+    if n <= 0 then
+        xs
+    else
+        match xs with
+        | x :: xs -> drop (n - 1) xs
+        | []      -> []
