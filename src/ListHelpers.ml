@@ -88,5 +88,15 @@ let rec drop n xs =
         xs
     else
         match xs with
-        | x :: xs -> drop (n - 1) xs
+        | _ :: xs -> drop (n - 1) xs
         | []      -> []
+
+let rec complete_zip f (xs, ys) =
+    match xs, ys with
+    | [], []           -> []
+    | x :: xs, []      -> (f (Some x), f None) :: complete_zip f (xs, [])
+    | [],      y :: ys -> (f None, f (Some y)) :: complete_zip f ([], ys)
+    | x :: xs, y :: ys -> (f (Some x), f (Some y)) :: complete_zip f (xs, ys)
+
+let unzip xys =
+    List.map fst xys, List.map snd xys

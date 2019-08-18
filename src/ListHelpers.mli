@@ -15,3 +15,5 @@ val remove              : 'a -> 'a list -> 'a list
 val zip                 : 'a list -> 'b list -> ('a * 'b) list option
 val take                : int -> 'a list -> 'a list
 val drop                : int -> 'a list -> 'a list
+val complete_zip        : ('a option -> 'b) -> 'a list * 'a list -> ('b * 'b) list
+val unzip               : ('a * 'b) list -> 'a list * 'b list

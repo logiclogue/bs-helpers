@@ -1,6 +1,6 @@
 {
   "name": "bs-helpers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "My OCaml helper functions",
   "main": "index.js",
   "scripts": {
