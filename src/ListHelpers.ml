@@ -100,3 +100,8 @@ let rec complete_zip f (xs, ys) =
 
 let unzip xys =
     List.map fst xys, List.map snd xys
+
+let rotate xs =
+    match xs with
+    | x :: xs -> List.append xs [x]
+    | []      -> []
