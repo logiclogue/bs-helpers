@@ -10,3 +10,4 @@ val compress        : 'a option option -> 'a option
 val is_greater_than : ('a -> 'a -> bool) -> 'a option -> 'a option -> bool
 val is_present      : 'a option -> bool
 val from_exception  : ('a -> 'b) -> 'a -> 'b option
+val opt_opt_to_opt  : ('a option * 'b option) -> ('a * 'b) option
