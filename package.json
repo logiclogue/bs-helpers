@@ -19,6 +19,10 @@
   "devDependencies": {
     "bs-platform": "^5.0.7",
     "chai": "^4.2.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "rxjs": "^6.2.1"
+  },
+  "dependencies": {
+    "rxjs": "^6.5.3"
   }
 }
