@@ -11,7 +11,3 @@ let out_opt_right (x, y_opt) =
     match y_opt with
     | Some y -> Some (x, y)
     | None   -> None
-
-let take_left (x, _) = x
-
-let take_right (_, y) = y
