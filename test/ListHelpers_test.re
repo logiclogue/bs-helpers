@@ -28,4 +28,16 @@ describe("ListHelpers", () => {
             });
         });
     });
+
+    describe(".filter_options()", () => {
+        context("given [Some 1, None, Some 2]", () => {
+            let input = [Some(1), None, Some(2)];
+
+            let result = filter_options(input);
+
+            it("returns [1, 2]", () => {
+                expect(result)->t->deep->equal([1, 2]);
+            });
+        });
+    });
 });
