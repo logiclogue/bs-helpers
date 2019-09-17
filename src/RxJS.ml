@@ -127,7 +127,7 @@ external publish_behavior
     [@@bs.module "rxjs/operators"]
 
 external distinct_until_changed_full
-    : (('a * 'a) -> bool) option -> ('a -> 'b) option
+    : ('a -> 'a -> bool) option -> ('a -> 'b) option
     -> 'a mono_type_operator_function
     = "distinctUntilChanged"
     [@@bs.module "rxjs/operators"]
