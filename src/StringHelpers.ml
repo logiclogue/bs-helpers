@@ -15,3 +15,7 @@ let lowercase_first_char =
         else
             c
     )
+
+let from_bool = function
+    | true  -> "true"
+    | false -> "false"

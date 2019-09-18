@@ -61,6 +61,11 @@ let merge
     : ('a observable) array -> 'a observable
     = fun _streams -> [%bs.raw {| Rxjs.merge.apply({}, _streams) |}]
 
+external from_event
+    : 'a Event.t -> string -> 'a observable
+    = "fromEvent"
+    [@@bs.val] [@@bs.module "rxjs"]
+
 external map
     : ('a -> 'b) -> ('a, 'b) operator_function
     = "map"
@@ -122,7 +127,7 @@ external publish_behavior
     [@@bs.module "rxjs/operators"]
 
 external distinct_until_changed_full
-    : (('a * 'a) -> bool) option -> ('a -> 'b) option
+    : ('a -> 'a -> bool) option -> ('a -> 'b) option
     -> 'a mono_type_operator_function
     = "distinctUntilChanged"
     [@@bs.module "rxjs/operators"]

@@ -100,3 +100,15 @@ let rec complete_zip f (xs, ys) =
 
 let unzip xys =
     List.map fst xys, List.map snd xys
+
+let rotate xs =
+    match xs with
+    | x :: xs -> List.append xs [x]
+    | []      -> []
+
+let filter_options xopts =
+    List.fold_right (fun xopt xs ->
+        match xopt with
+        | None   -> xs
+        | Some x -> x :: xs
+    ) xopts []

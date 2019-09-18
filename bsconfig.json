@@ -1,14 +1,14 @@
 {
   "name": "bs-helpers",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "sources": [
     {
       "dir" : "src",
-      "subdirs" : true
+      "subdirs": true
     },
     {
-      "dir" : "test",
-      "subdirs" : true
+      "dir": "test",
+      "subdirs": true
     }
   ],
   "package-specs": {

@@ -59,3 +59,9 @@ let from_exception f x =
         Some (f x)
     with _ ->
         None
+
+let opt_opt_to_opt (x_opt, y_opt) =
+    let inner_f x y = (x, y) in
+    let outer_f x = map (inner_f x) y_opt in
+
+    bind outer_f x_opt
