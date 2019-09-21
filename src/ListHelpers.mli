@@ -18,3 +18,4 @@ val drop                : int -> 'a list -> 'a list
 val complete_zip        : ('a option -> 'b) -> 'a list * 'a list -> ('b * 'b) list
 val unzip               : ('a * 'b) list -> 'a list * 'b list
 val rotate              : 'a list -> 'a list
+val filter_options      : 'a option list -> 'a list
