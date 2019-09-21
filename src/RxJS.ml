@@ -164,3 +164,7 @@ let create_of_list
         |> of_value
         |> map (List.map of_value)
         |> merge_map merge_list
+
+let concat_list
+    : ('a list, 'a) operator_function
+    = fun xs_observable -> merge_map create_of_list xs_observable
