@@ -19,3 +19,6 @@ let lowercase_first_char =
 let from_bool = function
     | true  -> "true"
     | false -> "false"
+
+let to_list s =
+    List.init (String.length s) (String.get s)
