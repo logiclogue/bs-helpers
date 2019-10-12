@@ -112,3 +112,13 @@ let filter_options xopts =
         | None   -> xs
         | Some x -> x :: xs
     ) xopts []
+
+let init length f =
+    let rec c f n =
+        if n >= length then
+            []
+        else
+            f n :: c f (n + 1)
+        in
+
+    c f 0

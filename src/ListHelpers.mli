@@ -19,3 +19,4 @@ val complete_zip        : ('a option -> 'b) -> 'a list * 'a list -> ('b * 'b) li
 val unzip               : ('a * 'b) list -> 'a list * 'b list
 val rotate              : 'a list -> 'a list
 val filter_options      : 'a option list -> 'a list
+val init                : int -> (int -> 'a) -> 'a list

@@ -21,4 +21,4 @@ let from_bool = function
     | false -> "false"
 
 let to_list s =
-    List.init (String.length s) (String.get s)
+    ListHelpers.init (String.length s) (String.get s)
