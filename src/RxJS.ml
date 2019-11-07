@@ -37,6 +37,11 @@ external animation_frame
     = "animationFrame"
     [@@bs.val] [@@bs.module "rxjs"]
 
+external default_interval
+    : int -> int observable
+    = "interval"
+    [@@bs.val] [@@bs.module "rxjs"]
+
 external interval
     : int -> scheduler -> int observable
     = "interval"
