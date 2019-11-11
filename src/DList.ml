@@ -12,5 +12,8 @@ let append dlist_a dlist_b =
 let cons x dlist =
     append (single x) dlist
 
+let flatten xss =
+    xss empty
+
 let to_list dlist =
     dlist []
