@@ -13,7 +13,7 @@ let cons x dlist =
     append (single x) dlist
 
 let flatten xss =
-    xss empty
+    (fun xs -> )
 
 let to_list dlist =
     dlist []
